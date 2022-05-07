@@ -12,7 +12,7 @@ public class Program
         bool check = true;
         while (check)
         {
-            Console.WriteLine(" Binary Search 1\n Insertion Sort 2\n Bubble Sort 3\n Checking for Ananagram 4\n");
+            Console.WriteLine(" Binary Search 1\n Insertion Sort 2\n Bubble Sort 3\n Checking for Ananagram 4\n For Counting PrimeNumber 5\n");
             Console.WriteLine("Enter the Above Optionb to the Excute the program");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -48,6 +48,14 @@ public class Program
                     string second_word = "earth";
                     search.IsAnagram(first_word, second_word);
                     break;
+                case 5:
+                    Console.WriteLine("Enter the Range of the Number:->");
+                    int firstNumber = Convert.ToInt32(Console.ReadLine());
+                    int secondNumber = Convert.ToInt32(Console.ReadLine());
+                    search.IsPrime(firstNumber, secondNumber);
+            
+
+                   break;
                 case 0:
                     check = false;
                     break;

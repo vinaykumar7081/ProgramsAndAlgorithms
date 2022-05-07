@@ -123,6 +123,30 @@ namespace AgorithmsProblems
                 Console.WriteLine(firstWord + " " + "and" + " " + secondWord + " " + "word is not Anagram");
             }
         }
-
+        int pcount = 0;
+        public void IsPrime(int startNumber, int endNumber)
+        {
+            for (int i = startNumber; i <= endNumber; i++)
+            {
+                int count = 0;
+                for (int j = 1; j <= i; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        count++;
+                    }
+                }
+                if (count == 2)
+                {
+                    pcount++;
+                    Console.WriteLine("Number is Prime" + i);
+                }
+                else
+                {
+                    Console.WriteLine("Number is not Prime" + i);
+                }
+            }
+            Console.WriteLine("Number of prime Number between 0 to 100:->" + pcount);
+        }
     }
 }
