@@ -12,7 +12,7 @@ public class Program
         bool check = true;
         while (check)
         {
-            Console.WriteLine(" Binary Search 1\n Insertion Sort 2\n Bubble Sort 3\n");
+            Console.WriteLine(" Binary Search 1\n Insertion Sort 2\n Bubble Sort 3\n Checking for Ananagram 4\n");
             Console.WriteLine("Enter the Above Optionb to the Excute the program");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -42,6 +42,11 @@ public class Program
                     string[] strins_array = input_String.Split(',');
                     search.SortingElements(strins_array);
                     search.DisplayArrayElemnts(strins_array);
+                    break;
+                case 4:
+                    string first_word = "heart";
+                    string second_word = "earth";
+                    search.IsAnagram(first_word, second_word);
                     break;
                 case 0:
                     check = false;
