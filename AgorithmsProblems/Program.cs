@@ -2,23 +2,23 @@
 using AgorithmsProblems;
 public class Program
 {
-    const string FILE_PATH = @"D:\AlgorithmProblemsStatement\ProgramAndAlgorithms\AlgorithmsAndProblems\Utility\Contant.txt";
+    const string FILE_PATH = @"D:\AlgorithmProblems\ProgramsAndAlgorithms\AgorithmsProblems\Utility\Content.txt";
     public static void Main(String[] args)
     {
         Console.WriteLine(" ####### WELCOME IN THE PROGRAMS AND ALGORITHMS ####### ");
-
+        SearchingElements search = new SearchingElements();
+        string input_String = File.ReadAllText(FILE_PATH);
+       
         bool check = true;
         while (check)
         {
-            Console.WriteLine(" Binary Search 1\n");
+            Console.WriteLine(" Binary Search 1\n Insertion Sort 2\n");
             Console.WriteLine("Enter the Above Optionb to the Excute the program");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch (option)
             {
                 case 1:
-                    SearchingElements search = new SearchingElements();
-                    string input_String = File.ReadAllText(FILE_PATH);
                     string[] array = input_String.Split(',');
                     int length = array.Length;
                     Console.WriteLine("Enter the word to Search");
@@ -32,6 +32,13 @@ public class Program
                     {
                         Console.WriteLine(key + " Word is  not present ");
                     }
+                    break;
+                    case 2:
+                    
+                    string[] input_Array = input_String.Split(',');
+                   
+                    search.SortingElements(input_Array);
+                    search.DisplayArrayElemnts(input_Array);
                     break;
                 case 0:
                     check = false;

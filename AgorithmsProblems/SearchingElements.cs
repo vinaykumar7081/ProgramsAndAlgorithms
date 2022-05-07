@@ -10,7 +10,7 @@ namespace AgorithmsProblems
     {
         public int BinarySearch(string[] array, int first_index, int last_index, string key)
         {
-            while (last_index >= first_index)
+            while (last_index > first_index)
             {
                 int mid = first_index + (last_index - first_index) / 2;
                 int res = key.CompareTo(array[mid]);
@@ -31,6 +31,40 @@ namespace AgorithmsProblems
                 }
             }
             return -1;
+        }
+        string key;
+        public void SortingElements(string[] array)
+        {
+            Console.Write("Unsorted Elements:->");
+            foreach (var element in array)
+            {
+                Console.Write(element+ " ");
+            }
+            Console.WriteLine(" ");
+            int length = array.Length;
+            for (int i = 1; i < length; i++)
+            {
+                string temp = array[i];
+
+                // Insert array[j] at its correct position
+                int j = i - 1;
+                while (j >= 0 && temp.Length < array[j].Length)
+                {
+                    array[j + 1] = array[j];
+                    j--;
+                }
+                array[j + 1] = temp;
+            }
+            // DisplayArrayElemnts(array);
+        }
+        public void DisplayArrayElemnts(String[] str)
+        {
+            Console.Write("Sorted Elemnets is:-> ");
+            foreach (var elements in str)
+            {
+                Console.Write(elements + " ");
+            }
+            Console.WriteLine(" ");
         }
     }
 }
