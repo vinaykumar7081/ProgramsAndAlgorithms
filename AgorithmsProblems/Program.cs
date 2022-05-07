@@ -12,7 +12,7 @@ public class Program
         bool check = true;
         while (check)
         {
-            Console.WriteLine(" Binary Search 1\n Insertion Sort 2\n Bubble Sort 3\n Checking for Ananagram 4\n For Counting PrimeNumber 5\n Checking Number is Palindrome 6\n Checking Number is Anagram 7\n");
+            Console.WriteLine(" Binary Search 1\n Insertion Sort 2\n Bubble Sort 3\n Checking for Ananagram 4\n For Counting PrimeNumber 5\n Checking Number is Palindrome 6\n Checking Number is Anagram 7\n Searching a Number 8\n");
             Console.WriteLine("Enter the Above Optionb to the Excute the program");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -60,6 +60,19 @@ public class Program
                     break;
                 case 7:
                     search.NumberIsAnagram();
+                    break;
+                case 8:
+                    Console.WriteLine("Enter a Number");
+                    int input=Convert.ToInt32(Console.ReadLine());
+                    int outrput=search.SearchingNumber(input);
+                    if (outrput == -1)
+                    {
+                        Console.WriteLine("Number is Founded");
+                    }
+                    else 
+                    {
+                        Console.WriteLine("Number is not Founded");
+                    }
                     break;
                 case 0:
                     check = false;

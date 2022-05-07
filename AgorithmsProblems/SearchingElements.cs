@@ -200,5 +200,36 @@ namespace AgorithmsProblems
                 }
             }
         }
+        public int SearchingNumber(int taken_Number)
+        {
+            int square_Number =(int) Math.Pow(2, taken_Number);
+            if (square_Number % 2 != 0)
+            { 
+            int mid=square_Number+1 / 2;
+                while (mid == taken_Number)
+                {
+                    Console.WriteLine(" Taken Number is:->" + mid);
+                    return mid;
+                }
+                if (mid > 0)
+                { 
+                
+                }
+            }
+            else
+            {
+                int mid = square_Number / 2;
+                while (mid == taken_Number)
+                {
+                    Console.WriteLine(" Taken Number is:->" + mid);
+                    return mid;
+                }
+                if (mid > 0)
+                {
+
+                }
+            }
+            return -1;
+        }
     }
 }
