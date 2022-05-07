@@ -9,6 +9,7 @@ namespace AgorithmsProblems
     public class SearchingElements
     {
         string key;
+        List<int> list=new List<int>();
         public int BinarySearch(string[] array, int first_index, int last_index, string key)
         {
             while (last_index > first_index)
@@ -86,7 +87,6 @@ namespace AgorithmsProblems
                         array[j] = array[j + 1];
                         array[j + 1] = temp;
                     }
-            
         }
         int count = 0;
         public void IsAnagram(string firstWord, string secondWord)
@@ -140,13 +140,65 @@ namespace AgorithmsProblems
                 {
                     pcount++;
                     Console.WriteLine("Number is Prime" + i);
+                    list.Add(i);
                 }
                 else
                 {
                     Console.WriteLine("Number is not Prime" + i);
                 }
             }
-            Console.WriteLine("Number of prime Number between 0 to 100:->" + pcount);
+            Console.WriteLine("Number of prime Number between startNumber to endNumber:->" + pcount);
+        }
+        public void IsPalindrome()
+        {
+            int rem=0, temp=0, sum=0, count=0;
+            foreach (int element in list)
+            {
+                temp = element;
+                while (temp != 0)
+                {
+                    rem = temp % 10;
+                    sum = sum * 10 + rem;
+                    temp = temp / 10;
+                }
+                if (sum == element)
+                {
+                    count++;
+                    Console.WriteLine("Number is Palindrome "+sum + " " + count);
+                }
+                else 
+                {
+                    Console.WriteLine("Number is not palindrome " + sum + " " + count);
+                }
+                Console.WriteLine(element + " ");
+            }
+        }
+        public void NumberIsAnagram()
+        {
+            int length = list.Count;
+            Console.WriteLine(length + " Lentght of the List");
+            for (int i = 0; i < length; i++)
+            {
+                int rem = 0, temp = 0, sum = 0, count = 0;
+                    temp=list[i];
+                    while (temp != 0)
+                    {
+                        rem = temp % 10;
+                        sum = sum * 10 + rem;
+                        temp = temp / 10;
+                    }
+                for (int j = 0; j < length; j++)
+                {
+                    if (list[j] == sum)
+                    {
+                        Console.WriteLine("Number is Anagram"+sum);
+                    }
+                    //else
+                    //{
+                    //    Console.WriteLine("Number is not Anagram");
+                    //}
+                }
+            }
         }
     }
 }
