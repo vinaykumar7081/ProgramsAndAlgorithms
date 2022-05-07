@@ -12,7 +12,7 @@ public class Program
         bool check = true;
         while (check)
         {
-            Console.WriteLine(" Binary Search 1\n Insertion Sort 2\n");
+            Console.WriteLine(" Binary Search 1\n Insertion Sort 2\n Bubble Sort 3\n");
             Console.WriteLine("Enter the Above Optionb to the Excute the program");
             int option = Convert.ToInt32(Console.ReadLine());
 
@@ -34,11 +34,14 @@ public class Program
                     }
                     break;
                     case 2:
-                    
                     string[] input_Array = input_String.Split(',');
-                   
                     search.SortingElements(input_Array);
                     search.DisplayArrayElemnts(input_Array);
+                    break;
+                case 3:
+                    string[] strins_array = input_String.Split(',');
+                    search.SortingElements(strins_array);
+                    search.DisplayArrayElemnts(strins_array);
                     break;
                 case 0:
                     check = false;

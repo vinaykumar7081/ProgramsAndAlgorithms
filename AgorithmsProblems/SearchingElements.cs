@@ -8,6 +8,7 @@ namespace AgorithmsProblems
 {
     public class SearchingElements
     {
+        string key;
         public int BinarySearch(string[] array, int first_index, int last_index, string key)
         {
             while (last_index > first_index)
@@ -32,13 +33,12 @@ namespace AgorithmsProblems
             }
             return -1;
         }
-        string key;
         public void SortingElements(string[] array)
         {
             Console.Write("Unsorted Elements:->");
             foreach (var element in array)
             {
-                Console.Write(element+ " ");
+                Console.Write(element + " ");
             }
             Console.WriteLine(" ");
             int length = array.Length;
@@ -66,5 +66,28 @@ namespace AgorithmsProblems
             }
             Console.WriteLine(" ");
         }
-    }
+        public void SortingElements(int[] array)
+        {
+            Console.Write("Unsorted Elements:->");
+            foreach (var element in array)
+            {
+                Console.Write(element + " ");
+            }
+            Console.WriteLine(" ");
+            int length = array.Length;
+            int n = array.Length;
+            for (int i = 0; i < n - 1; i++)
+             
+                for (int j = 0; j < n - i - 1; j++)
+                    if (array[j] > array[j + 1])
+                    {
+                        // swap temp and arr[i]
+                        int temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+            
+        }
+
+    }    
 }
