@@ -10,6 +10,7 @@ namespace GenericsProblemAndAlgorithm
     public class LinkedListOperation<T>
     {
         LinkedList<T> lists = new LinkedList<T>();
+
         public void AddingElements(LinkedList<T> list)
         {
             foreach (T item in list)
