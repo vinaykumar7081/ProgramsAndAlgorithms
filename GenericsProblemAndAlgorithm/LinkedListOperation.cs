@@ -10,7 +10,6 @@ namespace GenericsProblemAndAlgorithm
     public class LinkedListOperation<T>
     {
         LinkedList<T> lists = new LinkedList<T>();
-        public Node<T> head = null;
         public void AddingElements(LinkedList<T> list)
         {
             foreach (T item in list)
@@ -26,8 +25,8 @@ namespace GenericsProblemAndAlgorithm
                 if (item.Equals(value))
                 {
                     lists.Remove(value);
-                    Console.Write(item + " ");
                 }
+                Console.Write(item + " ");
             }
             Display();
         }
@@ -39,7 +38,6 @@ namespace GenericsProblemAndAlgorithm
                 if (item.Equals(value))
                 {
                     status = false;
-                    
                 }
                 else
                 {
