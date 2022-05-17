@@ -25,8 +25,10 @@ namespace GenericsProblemAndAlgorithm
                     temp = temp.next;
                 }
                 temp.next = newNode;
-                Console.WriteLine(newNode.data + " " + "inserted into Linked List ");
+                Console.Write(newNode.data + " " + "inserted into Linked List ");
             }
+            Console.WriteLine();
+            //DisplaySortedList();
         }
         public void SortOrderList()
         {
@@ -82,7 +84,6 @@ namespace GenericsProblemAndAlgorithm
                 count++;
             }
             return count;
-            DisplaySortedList();
         }
         public void Append(T data)
         {
@@ -94,8 +95,6 @@ namespace GenericsProblemAndAlgorithm
             }
             temp.next = node;
             Console.WriteLine(node.data + " " + "Appended into Linked List ");
-           
-
         }
         public int Size()
         {
@@ -129,7 +128,9 @@ namespace GenericsProblemAndAlgorithm
             }
             Node<T> next = temp.next.next;
             temp.next = next;
+            DisplaySortedList();
         }
+        
     }
     
 }

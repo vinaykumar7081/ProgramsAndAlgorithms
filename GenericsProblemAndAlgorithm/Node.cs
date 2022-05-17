@@ -10,9 +10,9 @@ namespace GenericsProblemAndAlgorithm
     {
         public T data;
         public Node<T> next;
-        public Node(T data)
+        public Node(T value)
         {
-            this.data = data;
+           data = value;
             next = null;
         }
     }
